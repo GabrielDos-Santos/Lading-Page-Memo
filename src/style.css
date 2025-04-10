@@ -2,4 +2,38 @@
     margin:0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.logo{
+    width: 5rem;
+    margin-right: 85rem;
+}
+:root{
+    --cor-principal:#277e1b;
+}
+
+.nav-link{
+text-decoration: none;
+color: black;
+font-size: 1.1rem;
+padding: 1.5rem;
+}
+
+.header{
+    text-align: center;
+}
+
+.hero__header-title{
+    margin-top: 5rem;
+    font-size: 4.5rem;
+}
+
+.green{
+    color: var(--cor-principal);
+}
+
+button{
+    margin: 1rem;
+    border: 1px transparent solid;
 }
