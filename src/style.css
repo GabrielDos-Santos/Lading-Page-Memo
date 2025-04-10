@@ -41,11 +41,41 @@ button{
 .imagem{
     max-width:60rem;
     border: 1px solid transparent;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0 0;
     z-index: -999;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--cor-principal));
 }
 
-img::before{
-    content: 'testeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee';
-    color: white;
+.shadow-box {
+    position: relative; 
+    display: inline-block; 
+}
+
+.shadow-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px; 
+    box-shadow: 0 5rem 0.5rem rgba(54, 54, 54, 0.25);
+    z-index: -1; 
+}
+
+.hero__features{
+    text-align: center;
+    margin-top: 15rem;
+}
+
+.hero__features-title{
+    font-size: 2.5rem;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container{
+    list-style: none;
 }
