@@ -36,4 +36,16 @@ padding: 1.5rem;
 button{
     margin: 1rem;
     border: 1px transparent solid;
+    position: relative;
+}
+.imagem{
+    max-width:60rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    z-index: -999;
+}
+
+img::before{
+    content: 'testeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee';
+    color: white;
 }
