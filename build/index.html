@@ -17,12 +17,12 @@
             <nav class="hero__nav">
                 <ul class="nav">
                     <li class="nav-item">
-                    <a href="#"><img class="logo" src="./img/logo.png" alt="Logo"></a>
+                    <a href="index.html"><img class="logo" src="./img/logo.png" alt="Logo"></a>
                     <li class="nav-item">
-                    <a class="nav-link active" href="#">Funcionalidades</a>
+                    <a class="nav-link active" href="#features">Funcionalidades</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Beneficios</a>
+                    <a class="nav-link" href="#benefits">Beneficios</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="#">Contato</a>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </section>
-            <section class="features">
+            <section id="features" class="features">
                 <div class="hero__features">
                     <h2 class="hero__features-title">Funcionalidades completas para sua empresa</h2>
                     <p class="hero__features-text">Nossa solução integrada oferece todas as ferramentas necessárias para otimizar operações e <p>impulsionar o crescimento do seu negócio.</p></p>
@@ -115,7 +115,7 @@
                     </div>
                 </div>
             </section>
-            <section class="py-5 bg-light">
+            <section id="benefits" class="py-5 bg-light">
                 <div class="container">
                     <div class="row align-items-center">
                     <!-- Texto -->
@@ -181,15 +181,17 @@
             <section class="demonstration">
                 <div class="hero__demonstration">
                     <h4 class="hero__demonstration-title">Pronto para otimizar sua operação?</h4>
-                    <p class="hero__demonstration-text">Agende uma demonstração personalizada e descubra como nosso sistema ERP pode transformar seu negócio, aumentar a eficiência e impulsionar o crescimento.</p>
+                    <p class="hero__demonstration-text">Agende uma demonstração personalizada e descubra como nosso sistema ERP pode <p>transformar seu negócio, aumentar a eficiência e impulsionar o crescimento.</p></p>
                 </div>
-                <div>
-                    <input type="text" id="name" placeholder="Nome" required>
-                    <input type="email" id="E-mail" placeholder="E-mail" required>
-                    <input type="number" id="phoneNumber" placeholder="Telefone" required>
-                    <input type="submit" value="Solicitar demonstração">
-                    <p>Responderemos em até 24 horas úteis.</p>
-                </div>
+                <div class="inputs-wrapper">
+                    <div class="inputs">
+                        <input type="text" id="name" placeholder="Nome" required>
+                        <input type="email" id="E-mail" placeholder="E-mail" required>
+                        <input type="number" id="phoneNumber" placeholder="Telefone" required>
+                        <input type="submit" value="Solicitar demonstração">
+                        <p class="demonstration__paragrafo">Responderemos em até 24 horas úteis.</p>
+                    </div>
+                </div>  
             </section>
         </main>
         <address>
