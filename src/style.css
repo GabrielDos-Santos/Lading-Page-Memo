@@ -76,7 +76,6 @@ ul{
     display: flex;
     flex-wrap: wrap;
 }
-
 .end_image{
     float: right;
     width: 35rem;
