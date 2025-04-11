@@ -2,7 +2,7 @@
     margin:0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .logo{
@@ -12,24 +12,25 @@
 :root{
     --cor-principal:#277e1b;
     --cor-secundaria:#29bb15;
-    --cor-light:#e3f8eb;
+    --cor-light:#ffffff;
 }
-nav {
+.hero__nav {
+    background: rgba(255, 255, 255, 0.2); /* Transparência */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 12px;
+    padding: 5px 15px;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    background: linear-gradient(90deg,rgba(19, 140, 3, 1) 0%, rgba(0, 255, 34, 1) 52%, rgba(96, 252, 138, 1) 99%);
-    z-index: 1000; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    border: transp;
+    top: 0;
+    z-index: 999;
 }
-
 .nav-link{
 text-decoration: none;
 color: black;
 font-size: 1.1rem;
-padding: 1.5rem;
+padding: 1.1rem;
 }
 
 .header{
@@ -100,7 +101,7 @@ ul{
 
 .hero__demonstration{
     text-align: center;
-    color: var(--cor-light);
+    color: black;
 }
 
 .hero__demonstration > h4 {
@@ -128,11 +129,66 @@ input{
 }
 
 input[type="submit"]{
-    background-color: var(--cor-light);
-    color: var(--cor-secundaria);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-light);
     cursor: pointer;
 }
 ::placeholder{
     color: rgba(5, 5, 5, 0.411);
 }
 
+.demonstration {
+    background: rgba(0, 255, 0, 0.1); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* border: 1px solid rgba(0, 255, 0, 0.3);
+    border-radius: 16px; */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6); 
+    padding: 2rem;
+    margin: 2rem auto;
+    width:100%;
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.footer-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.footer-link, .footer-text {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #007bff;
+    text-decoration: underline;
+}

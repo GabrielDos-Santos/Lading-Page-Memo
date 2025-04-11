@@ -5,7 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../src/style.css">
@@ -186,40 +189,50 @@
                 <div class="inputs-wrapper">
                     <div class="inputs">
                         <input type="text" id="name" placeholder="Nome" required>
-                        <input type="email" id="E-mail" placeholder="E-mail" required>
-                        <input type="number" id="phoneNumber" placeholder="Telefone" required>
-                        <input type="submit" value="Solicitar demonstração">
+                        <input type="email" id="E-mail" placeholder="E-mail" autocomplete="off" required>
+                        <input type="number" id="phoneNumber" placeholder="Telefone" autocomplete="off" required>
+                        <input type="submit" value="Solicitar demonstração" autocomplete="off">
                         <p class="demonstration__paragrafo">Responderemos em até 24 horas úteis.</p>
                     </div>
                 </div>  
             </section>
         </main>
         <address>
-            <section class="address"></section>
-                <div class="hero__address">
-                <h5 class="hero__address-title">Sistema ERP</h5>
-                <p class="hero__address-text">Soluções integradas para gestão empresarial que transformam negócios.</p>
+            <section class="footer-content">
+                <div class="footer-column">
+                    <h5 class="footer-title">Sistema ERP</h5>
+                    <p class="footer-description">Soluções integradas para gestão empresarial que transformam negócios.</p>
+                    <a href="https://www.facebook.com/memoriainfo" target="_blank" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/memoriainfo/" target="_blank" class="fa fa-instagram"></a>
+                    <a href="https://www.youtube.com/channel/UCbuvc6oBt1ofVBmv_qDzswg" target="_blank" class="fa fa-youtube"></a>
+                    <a href="https://www.linkedin.com/company/memoriainfo/" target="_blank" class="fa fa-linkedin"></a>
                 </div>
-                <div class="hero__address">
-                    <h5 class="hero__address-title">Empresa</h5>
-                    <a href="#">Sobre Nós</a>
-                    <a href="#">Nossos clientes</a>
+                <div class="footer-column">
+                    <h5 class="footer-title">Empresa</h5>
+                    <a href="#" class="footer-link">Sobre nós</a>
+                    <a href="#" class="footer-link">Nossos clientes</a>
+                    <a href="#" class="footer-link">Carreiras</a>
                 </div>
-                <div class="hero__address">
-                    <h5 class="hero__address-title">Suporte</h5>
-                    <a href="#">Central de ajuda</a>
-                    <a href="#">Documentação</a>
-                    <a href="#">Status do sistema</a>
-                    <a href="#">Tutoriais</a>
-                    <a href="#">FAQ</a>
+                <div class="footer-column">
+                    <h5 class="footer-title">Suporte</h5>
+                    <a href="#" class="footer-link">Central de ajuda</a>
+                    <a href="#" class="footer-link">Documentação</a>
+                    <a href="#" class="footer-link">Status do sistema</a>
+                    <a href="#" class="footer-link">Tutoriais</a>
+                    <a href="#" class="footer-link">FAQ</a>
                 </div>
-                <div class="hero__address">
-                    <h5 class="hero__address-title">Contato</h5>
-                    <p>Av. Presidente Vargas, 910 Apt 4 Passo Fundo, RS</p>
-                    <a href="https://wa.me/54930454599">(54) 9 3045-4599 | (54) 9 3046-6767</a>
-                    <a href="mailto:suporte@memoriainformatica.com.br">suporte@memoriainformatica.com.br</a>
+                <div class="footer-column">
+                    <h5 class="footer-title">Contato</h5>
+                    <p class="footer-text">Av. Paulista, 1000</p>
+                    <p class="footer-text">São Paulo, SP</p>
+                    <a href="https://wa.me/54930454599" class="footer-link">(54) 9 3045-4599</a>
+                    <a href="mailto:suporte@memoriainformatica.com.br" class="footer-link">suporte@memoriainformatica.com.br</a>
                 </div>
             </section>
         </address>
+        <hr>
+        <footer>
+            <p>© 2025 Memoria Informatica. Todos os direitos reservados.</p>
+        </footer>
     </body>
 </html>
