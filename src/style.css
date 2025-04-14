@@ -61,7 +61,7 @@ button{
     background: linear-gradient(rgba(0, 0, 0, 0.1), var(--cor-principal));
 }
 
-.shadow-box {
+/* .shadow-box {
     position: relative; 
     display: inline-block; 
 }
@@ -76,7 +76,7 @@ button{
     border-radius: 15px; 
     box-shadow: 0 5rem 0.5rem rgba(54, 54, 54, 0.25);
     z-index: -1; 
-}
+} */
 
 .hero__features{
     text-align: center;
@@ -194,6 +194,18 @@ input[type="submit"]{
     color: #007bff;
     text-decoration: underline;
 }
+.gallery{
+    width: 100%;
+}
+
+.gallery-cointainer{
+    align-items: center;
+    display: flex;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+}
 @media (max-width: 1444px) {
     .hero__nav {
         padding: 5px 10px;
@@ -261,9 +273,9 @@ input[type="submit"]{
         margin-bottom: 10px;
     }
 
-    .shadow-box::before {
+    /* .shadow-box::before {
         box-shadow: 0 3rem 0.3rem rgba(54, 54, 54, 0.2);
-    }
+    } */
 }
 
 @media (max-width: 768px) {
