@@ -195,7 +195,7 @@ input[type="submit"]{
     text-decoration: underline;
 }
 .hero__header-image{
-    margin: 0;
+    margin: 5rem;
     padding: 0;
     width: 100%;
     display: flex;
@@ -261,7 +261,7 @@ input[type="submit"]{
 .gallery-controls{
     display: flex;
     justify-content: center;
-    margin-top:25px 0;
+    margin:25px 0;
     height: 100px;
 }
 .gallery-controls button{
@@ -278,6 +278,7 @@ input[type="submit"]{
 }
 .gallery-controls-previous{
     position: relative;
+    top: 17rem;
 }
 .gallery-controls-previous::before{
     border: solid #000;
@@ -298,6 +299,7 @@ input[type="submit"]{
 }
 .gallery-controls-next{
     position: relative;
+    top: 17rem;
 }
 .gallery-controls-next::before{
     border: solid #000;
@@ -307,7 +309,7 @@ input[type="submit"]{
     height: 5px;
     padding:10px;
     position: absolute;
-    top: 45;
+    top: 45%;
     right: -30px;
     transform: rotate(-45deg) translateY(-50%);
     transition: right 0.15s ease-in-out;
