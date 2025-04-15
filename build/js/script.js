@@ -15,7 +15,7 @@ if (galleryContainer && galleryControlsContainer && galleryItems.length > 0) {
             this.carouselControls = controls;
             this.carouselArray = [...items];
         }
-
+    
         updateGallery(){
             this.carouselArray.forEach(el => {
                 el.classList.remove('gallery-item-1');
@@ -24,12 +24,12 @@ if (galleryContainer && galleryControlsContainer && galleryItems.length > 0) {
                 el.classList.remove('gallery-item-4');
                 el.classList.remove('gallery-item-5');
             });
-
+    
             this.carouselArray.slice(0,5).forEach((el, i) => {(
                 el.classList.add(`gallery-item-${i+1}`))
             });
         }
-
+    
         setCurrentState(direction){
             if (direction.className == 'gallery-controls-previous'){
                 this.carouselArray.unshift(this.carouselArray.pop())
@@ -38,12 +38,14 @@ if (galleryContainer && galleryControlsContainer && galleryItems.length > 0) {
             }
             this.updateGallery();
         }
+    
         setControls(){
             this.carouselControls.forEach(control => {
                 galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-${control}`;
                 document.querySelector(`.gallery-controls-${control}`).innerText = control;
             });
         }
+    
         useControls(){
             const triggers = [...galleryControlsContainer.childNodes];
             triggers.forEach(control => {
@@ -53,11 +55,19 @@ if (galleryContainer && galleryControlsContainer && galleryItems.length > 0) {
                 });
             });
         }
+    
+        autoPlay(interval = 3000) {
+            setInterval(() => {
+                this.carouselArray.push(this.carouselArray.shift()); // Move para o próximo item
+                this.updateGallery();
+            }, interval);
+        }
     }
-
-const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
-exampleCarousel.setControls();
-exampleCarousel.useControls();
+    
+    const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
+    exampleCarousel.setControls();
+    exampleCarousel.useControls();
+    exampleCarousel.autoPlay(3000); // Define o autoplay com intervalo de 3 segundos
 }else{
     console.error('Erro: Elementos necessários para o carrossel não foram encontrados no DOM.');
 }
