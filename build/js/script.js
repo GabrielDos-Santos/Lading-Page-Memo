@@ -1,7 +1,26 @@
 const galleryContainer = document.querySelector('.gallery-container');
 const galleryControlsContainer = document.querySelector('.gallery-controls')
 const galleryControls = ['previous', 'next'];
-const galleryItems = document.querySelectorAll('.gallery-item');
+const galleryImages = [
+    { src: 'img/Imagem1.jpg', alt: 'Imagem-1-Backup' },
+    { src: 'img/Imagem2.jpg', alt: 'Imagem-2-Bares' },
+    { src: 'img/Imagem3.jpg', alt: 'Imagem-3-CashBack' },
+    { src: 'img/Imagem4.jpg', alt: 'Imagem-4-e-Commerce' },
+    { src: 'img/Imagem5.jpg', alt: 'Imagem-5-Marketplace' }
+];
+
+if (galleryContainer) {
+    galleryImages.forEach((image, index) => {
+        const imgElement = document.createElement('img');
+        imgElement.className = `gallery-item gallery-item-${index + 1}`;
+        imgElement.src = image.src;
+        imgElement.alt = image.alt;
+        imgElement.dataset.index = index + 1;
+        galleryContainer.appendChild(imgElement);
+    });
+}
+
+const galleryItems = document.querySelectorAll('.gallery-item'); // Atualiza a seleção após adicionar dinamicamente
 
 console.log(galleryContainer)
 console.log(galleryControlsContainer)
