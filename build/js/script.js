@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'img/Imagem16.jpg', alt: 'Imagem-16-Transportadora' },
         { src: 'img/Imagem17.jpg', alt: 'Imagem-17-Youtube' },
         { src: 'img/Imagem18.jpg', alt: 'Imagem-18-Tef' },
+        { src: 'img/Imagem19.jpg', alt: 'Imagem-19-Distribuição' },
+        { src: 'img/Imagem20.jpg', alt: 'Imagem-20-Checklist' },
+        { src: 'img/Imagem21.jpg', alt: 'Imagem-21-Auto-Pesagem' },
+        { src: 'img/Imagem22.jpg', alt: 'Imagem-22-Ass_Ténica' },
+        { src: 'img/Imagem23.jpg', alt: 'Imagem-23-Comercio-Geral' },
     ];
 
     if (galleryContainer) {
