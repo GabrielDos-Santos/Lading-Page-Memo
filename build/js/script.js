@@ -5,7 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'img/Imagem2.jpg', alt: 'Imagem-2-Bares' },
         { src: 'img/Imagem3.jpg', alt: 'Imagem-3-CashBack' },
         { src: 'img/Imagem4.jpg', alt: 'Imagem-4-e-Commerce' },
-        { src: 'img/Imagem5.jpg', alt: 'Imagem-5-Marketplace' }
+        { src: 'img/Imagem5.jpg', alt: 'Imagem-5-Marketplace' },
+        { src: 'img/Imagem6.jpg', alt: 'Imagem-6-Extintor' },
+        { src: 'img/Imagem7.jpg', alt: 'Imagem-7-Marketplace' },
+        { src: 'img/Imagem8.jpg', alt: 'Imagem-8-Mat_Construção' },
+        { src: 'img/Imagem9.jpg', alt: 'Imagem-9-Oficina' },
+        { src: 'img/Imagem10.jpg', alt: 'Imagem-10-Pix' },
+        { src: 'img/Imagem11.jpg', alt: 'Imagem-11-Prof_Saude' },
+        { src: 'img/Imagem12.jpg', alt: 'Imagem-12-SPic2' },
+        { src: 'img/Imagem13.jpg', alt: 'Imagem-13-Tablet_Mesa' },
+        { src: 'img/Imagem14.jpg', alt: 'Imagem-14-Rotas_Mob' },
+        { src: 'img/Imagem15.jpg', alt: 'Imagem-15-Sacoleiras' },
+        { src: 'img/Imagem16.jpg', alt: 'Imagem-16-Transportadora' },
+        { src: 'img/Imagem17.jpg', alt: 'Imagem-17-Youtube' },
+        { src: 'img/Imagem18.jpg', alt: 'Imagem-18-Tef' },
     ];
 
     if (galleryContainer) {
