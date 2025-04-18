@@ -64,10 +64,10 @@ padding: 1.1rem;
 
 #prev-btn{
     margin: 2rem;
-    margin-left:0;
+    margin-left:-1.5rem;
 }
 #next-btn{
-    margin: 2rem;
+    margin: 2rem 2.5rem;
 }
 .imagem{
     max-width:60rem;
@@ -318,7 +318,7 @@ input[type="submit"]{
     margin: auto;
   }
   
-  .header .badge {
+  /* .header .badge {
     display: inline-block;
     padding: 0.25rem 1rem;
     background-color: #e0f2ff;
@@ -327,18 +327,12 @@ input[type="submit"]{
     border-radius: 999px;
     font-size: 0.875rem;
     margin-bottom: 1rem;
-  }
+  } */
   
   .header h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-  }
-  
-  .highlight {
-    background: linear-gradient(to right, #4f46e5, #3b82f6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
   
   .testimonial-container {
@@ -402,7 +396,7 @@ input[type="submit"]{
     pointer-events: auto;
     background: rgba(255, 255, 255, 0.8);
     border: none;
-    font-size: 2rem;
+    font-size: 1rem;
     width: 40px;
     height: 40px;
     border-radius: 999px;
@@ -464,7 +458,14 @@ input[type="submit"]{
     color: #64748b;
     font-size: 0.875rem;
   }
-  
+  .quote{
+    margin-top: 2rem ;
+    margin-left: 1.5rem;
+    font-size: 1.4rem;
+    display: inline-block;
+    text-align: left;
+  }
+
 
 
 @media (max-width: 1444px) {
