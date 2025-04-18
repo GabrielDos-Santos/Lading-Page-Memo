@@ -61,9 +61,83 @@ document.addEventListener('DOMContentLoaded', () => {
             navigation: {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
+            },
+            autoplay:{
+              delay: 2500,
+              disableOnInteraction: false,
             }
           });
     } else {
         console.error('Erro: Elemento .swiper-wrapper não encontrado no DOM.');
     }
 });
+
+const testimonials = [
+  {
+    quote: "Estamos totalmente satisfeitos com os processos e atendimentos de suporte, sempre aptos e dispostos resolvendo tupo prontamente. Indicamos a Memória sempre!",
+    author: "Viamedi Card​",
+    position: "Financeiro",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+  },
+  {
+    quote: "Realmente o pessoal da Memória é muito eficiente e atencioso, sempre que preciso chamo e sou atendido na hora!",
+    author: "Clonei Lorenzetti",
+    position: "Proprietário e Gerente LACASA",
+    avatar: "https://randomuser.me/api/portraits/men/35.jpg"
+  }
+];
+
+let currentIndex = 0;
+const contentEl = document.getElementById("testimonial-content");
+const dotsEl = document.getElementById("pagination-dots");
+
+function renderTestimonial(index) {
+  contentEl.classList.remove("show");
+  contentEl.classList.add("fade");
+  setTimeout(() => {
+    const t = testimonials[index];
+    contentEl.innerHTML = `
+    <p class="quote">"${t.quote}"</p>
+    <div class="author-info">
+      <img class="avatar" src="${t.avatar}" alt="${t.author}">
+      <div class="author-details">
+        <strong class="author">${t.author}</strong><br/>
+        <small class="position">${t.position}</small>
+      </div>
+    </div>
+  `;
+    contentEl.classList.remove("fade");
+    contentEl.classList.add("show");
+    updateDots(index);
+  }, 200);
+}
+
+function updateDots(index) {
+  dotsEl.innerHTML = testimonials.map((_, i) =>
+    `<button class="${i === index ? 'active' : ''}" onclick="goToTestimonial(${i})"></button>`
+  ).join('');
+}
+
+function goToTestimonial(index) {
+  currentIndex = index;
+  renderTestimonial(currentIndex);
+}
+
+function prevTestimonial() {
+  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  renderTestimonial(currentIndex);
+}
+
+function nextTestimonial() {
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  renderTestimonial(currentIndex);
+}
+
+document.getElementById("prev-btn").onclick = prevTestimonial;
+document.getElementById("next-btn").onclick = nextTestimonial;
+
+setInterval(() => {
+  nextTestimonial();
+}, 8000);
+
+renderTestimonial(currentIndex);

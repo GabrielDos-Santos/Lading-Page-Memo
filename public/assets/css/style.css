@@ -22,9 +22,9 @@ html{
 .hero__header{
     text-align: center;
 }
-.logo{
+.logo-emp{
     width: 5rem;
-    margin-right: 85rem;
+    margin-right: 75rem;
 }
 .hero__nav {
     background: rgba(255, 255, 255, 0.2); /* Transparência */
@@ -62,10 +62,12 @@ padding: 1.1rem;
     color: var(--cor-principal);
 }
 
-button{
-    margin: 1rem;
-    border: 1px transparent solid;
-    position: relative;
+#prev-btn{
+    margin: 2rem;
+    margin-left:0;
+}
+#next-btn{
+    margin: 2rem;
 }
 .imagem{
     max-width:60rem;
@@ -75,26 +77,9 @@ button{
     background: linear-gradient(rgba(0, 0, 0, 0.1), var(--cor-principal));
 }
 
-/* .shadow-box {
-    position: relative; 
-    display: inline-block; 
-}
-
-.shadow-box::before3 {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 15px; 
-    box-shadow: 0 5rem 0.5rem rgba(54, 54, 54, 0.25);
-    z-index: -1; 
-} */
-
 .hero__features{
     text-align: center;
-    margin-top: 15rem;
+    margin-top: 5rem;
 }
 
 .hero__features-title{
@@ -323,6 +308,163 @@ input[type="submit"]{
     height: auto;
     object-fit: cover;
 } 
+.testimonials-section {
+    padding: 6rem 1rem;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: auto;
+  }
+  
+  .header .badge {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    background-color: #e0f2ff;
+    color: #2563eb;
+    font-weight: 500;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  .header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .highlight {
+    background: linear-gradient(to right, #4f46e5, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .testimonial-container {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.05);
+    min-height: 260px;
+  }
+  
+  .testimonial-card {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .testimonial-card.fade {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  
+  .testimonial-card.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  
+  .pagination button {
+    width: 10px;
+    height: 10px;
+    background-color: #cbd5e1;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .pagination .active {
+    background-color: #3b82f6;
+    transform: scale(1.3);
+  }
+  
+  .nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .nav-buttons button {
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  
+  .clients-logos {
+    margin-top: 4rem;
+  }
+  
+  .clients-logos .logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    width: 80px;
+    height: 40px;
+    background-color: #e5e7eb;
+    border-radius: 0.5rem;
+  }
+  .author-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    border: 2px solid #bfdbfe;
+    position: absolute;
+  }
+  .avatar{
+    top: 10rem;
+    right: 50rem;
+  }
+  .author{
+    position: absolute;
+    top: 10rem;
+    left: 5rem;
+  }
+  .position{
+    position: absolute;
+    top: 11.5rem;
+    left: 5rem;
+  }  
+  .author-details {
+    text-align: left;
+    color: #0f172a;
+  }
+  
+  .author-details small {
+    color: #64748b;
+    font-size: 0.875rem;
+  }
+  
 
 
 @media (max-width: 1444px) {
@@ -343,13 +485,13 @@ input[type="submit"]{
         white-space: nowrap; /* Texto não quebra em 2 linhas */
     }
 
-    .logo {
+    .logo-emp {
         width: 3.5rem;     
         margin-right: 1rem;  
     }
 }
 @media (max-width: 1200px) {
-    .logo {
+    .logo-emp {
         margin-right: 2rem;
     }
 }
@@ -440,7 +582,7 @@ input[type="submit"]{
     }
 
     /* Ajuste da logo */
-    .logo {
+    .logo-emp {
         display: none;
     }
 }

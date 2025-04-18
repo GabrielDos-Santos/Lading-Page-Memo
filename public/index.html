@@ -20,7 +20,7 @@
             <nav class="hero__nav">
                 <ul class="nav">
                     <a href="index.html">
-                        <img class="logo" src="./img/logo.png" alt="Logo">
+                        <img class="logo-emp" src="../public/assets/img/logo.png" alt="Logo">
                     </a>
                     <button class="menu-toggle" aria-label="Abrir menu">☰</button>
                     <li class="nav-item">
@@ -32,6 +32,9 @@
                     <li class="nav-item">
                         <a class="nav-link hover" href="#contact">Contato</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover"  href="https://novidades.memoriainformatica.com.br/" target="_blank">Novidades</a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -40,7 +43,7 @@
                 <div class="hero__header">
                     <h1 class="hero__header-title">Gerencie seu negócio com <p class="green">eficiência.</p></h1>
                     <span class="hero__header-text">Uma solução completa de ERP que simplifica processos, aumenta a <p> produtividade e melhora os resultados da sua empresa.</p></span>
-                    <button type="button" class="btn btn-success">Agendar demonstração</button>
+                    <a href="#demonstration" type="button" class="btn btn-success" >Agendar demonstração</a>
                     <button type="button" class="btn btn-light">Saiba Mais</button>
                     <br>
                 </div>
@@ -124,17 +127,15 @@
                     </div>
                 </div>
             </section>
-            <section id="benefits" class="py-5 bg-light">
+            <section id="benefits" class="py-5 ">
                 <div class="container">
                     <div class="row align-items-center">
-                    <!-- Texto -->
                         <div class="col-lg-6 mb-4 mb-lg-0">
                             <h3 class="fw-bold">Transforme sua empresa com nosso sistema ERP</h3>
                             <p class="text-muted">
                             Nosso sistema integrado simplifica operações, elimina ineficiências e proporciona insights valiosos para impulsionar seu crescimento.
                             </p>
                     <div class="row">
-                        <!-- Coluna 1 -->
                         <div class="col-6">
                             <ul class="list-unstyled">
                             <li class="d-flex align-items-start mb-3">
@@ -155,7 +156,6 @@
                             </li>
                         </ul>
                         </div>
-                        <!-- Coluna 2 -->
                         <div class="col-6">
                             <ul class="list-unstyled">
                             <li class="d-flex align-items-start mb-3">
@@ -178,16 +178,42 @@
                         </div>
                     </div>
                     </div>
-                    <!-- Imagem -->
                     <div class="col-lg-6">
                     <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
                         alt="img_office" class="img-fluid rounded shadow">
                     </div>
-                    
                 </div>
-                </div>
+            </div>
             </section>
-            <section class="demonstration">
+            <section id="testimonials" class="testimonials-section">
+                <div class="container">
+                  <div class="header">
+                    <span class="badge">Casos de Sucesso</span>
+                    <h2>O que nossos <span class="highlight">clientes dizem</span></h2>
+                    <p>Veja como empresas de diversos setores transformaram seus negócios com nosso sistema ERP.</p>
+                  </div>
+              
+                  <div class="testimonial-container">
+                    <div class="testimonial-card" id="testimonial-content"></div>
+                    <div class="nav-buttons">
+                        <button id="prev-btn" class="nav-button prev" aria-label="Anterior">&#10094;</button>
+                        <button id="next-btn" class="nav-button next" aria-label="Próximo">&#10095;</button>
+                    </div>
+                  </div>
+                  <div class="pagination" id="pagination-dots"></div>
+                  <div class="clients-logos">
+                    <p>Empresas que confiam em nosso sistema</p>
+                    <div class="logos">
+                      <div class="logo"></div>
+                      <div class="logo"></div>
+                      <div class="logo"></div>
+                      <div class="logo"></div>
+                      <div class="logo"></div>
+                    </div>
+                  </div>
+                </div>
+              </section>              
+            <section id="demonstration" class="demonstration">
                 <div class="hero__demonstration">
                     <h4 class="hero__demonstration-title">Pronto para otimizar sua operação?</h4>
                     <p class="hero__demonstration-text">Agende uma demonstração personalizada e descubra como nosso sistema ERP pode <p>transformar seu negócio, aumentar a eficiência e impulsionar o crescimento.</p></p>
