@@ -506,7 +506,7 @@ input[type="submit"]{
   
   .client-logo-slider .swiper-slide img {
     max-width: 100%;
-    max-height: 60px;
+    max-height: 120px;
     object-fit: contain;
     /* filter: grayscale(100%); */
     opacity: 0.8;
@@ -518,8 +518,8 @@ input[type="submit"]{
     /* filter: grayscale(0%); */
     transform: scale(1.05);
   }
-  .client-logo img {
-    height: 10rem; /* Aumenta o tamanho dos logos */
+  #client-logos img {
+    height: 10rem;
     /* filter: grayscale(100%) opacity(0.6); */
     transition: all 0.3s ease;
   }
@@ -527,6 +527,7 @@ input[type="submit"]{
     transform: scale(1.1);
     filter: grayscale(0%) opacity(1);
   }
+
 
 @media (max-width: 1444px) {
     .hero__nav {
