@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const galleryContainer = document.querySelector('.swiper-wrapper');
+    const getLogo = document.getElementById('client-logos');
     const galleryImages = [
         { src: '../public/assets/img/Imagem1.jpg', alt: 'Imagem-1-Backup' },
         { src: '../public/assets/img/Imagem2.jpg', alt: 'Imagem-2-Bares' },
@@ -25,6 +26,35 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: '../public/assets/img/Imagem22.jpg', alt: 'Imagem-22-Ass_Ténica' },
         { src: '../public/assets/img/Imagem23.jpg', alt: 'Imagem-23-Comercio-Geral' },
     ];
+    const galleryLogos = [
+      { src: '../public/assets/img/Logo1.webp', alt: 'Logo-1' },
+      { src: '../public/assets/img/Logo2.webp', alt: 'Logo-2' },
+      { src: '../public/assets/img/Logo3.webp', alt: 'Logo-3' },
+      { src: '../public/assets/img/Logo4.webp', alt: 'Logo-4' },
+      { src: '../public/assets/img/Logo5.webp', alt: 'Logo-5' },
+      { src: '../public/assets/img/Logo6.webp', alt: 'Logo-6' },
+      { src: '../public/assets/img/Logo7.webp', alt: 'Logo-7' },
+      { src: '../public/assets/img/Logo8.webp', alt: 'Logo-8' },
+      { src: '../public/assets/img/Logo9.webp', alt: 'Logo-9' },
+      { src: '../public/assets/img/Logo10.webp', alt: 'Logo-10' },
+      { src: '../public/assets/img/Logo11.webp', alt: 'Logo-11' },
+      { src: '../public/assets/img/Logo12.webp', alt: 'Logo-12' },
+      { src: '../public/assets/img/Logo13.webp', alt: 'Logo-13' },
+    ]
+if (getLogo) {
+  galleryLogos.forEach((image) => {
+    const slide = document.createElement('div');
+    slide.className = 'swiper-slide';
+  
+    const imgElement = document.createElement('img');
+    imgElement.src = image.src;
+    imgElement.alt = image.alt;
+    imgElement.className = 'logo';
+  
+    slide.appendChild(imgElement);
+    getLogo.appendChild(slide);
+  });
+}
 
     if (galleryContainer) {
         galleryImages.forEach((image) => {
@@ -67,6 +97,17 @@ document.addEventListener('DOMContentLoaded', () => {
               disableOnInteraction: false,
             }
           });
+          new Swiper('.client-logo-slider', {
+            loop: true,
+            speed: 3000,
+            autoplay: {
+              delay: 0,
+              disableOnInteraction: false
+            },
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            allowTouchMove: false
+          });
     } else {
         console.error('Erro: Elemento .swiper-wrapper não encontrado no DOM.');
     }
@@ -74,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const testimonials = [
   {
-    quote: "Estamos totalmente satisfeitos com os processos e atendimentos de suporte, sempre aptos e dispostos resolvendo tupo prontamente. Indicamos a Memória sempre!",
+    quote: "Estamos totalmente satisfeitos com os processos e atendimentos de suporte, sempre aptos e dispostos resolvendo tudo prontamente. Indicamos a Memória sempre!",
     author: "Viamedi Card​",
     position: "Financeiro",
     avatar: "https://randomuser.me/api/portraits/women/44.jpg"
