@@ -540,9 +540,9 @@ input[type="submit"]{
     transform: translate(-50%, -50%); /* Centraliza o texto */
     font-size: 1.2rem;
     font-weight: bold;
-    color: #fff; /* Texto branco */
+    color: #fff;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Sombra para visibilidade */
-    opacity: 0; /* Escondido por padrão */
+    opacity: 0; 
     transition: opacity 0.3s ease;
     pointer-events: none; /* Impede interação com o texto */
   }
