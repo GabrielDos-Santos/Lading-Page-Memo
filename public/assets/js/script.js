@@ -29,19 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     //Logo clientes
     const galleryLogos = [
-      { src: '../public/assets/img/Logo1.webp', alt: 'Logo-1', href: 'https://redeconstruutil.com.br/' },
-      { src: '../public/assets/img/Logo2.webp', alt: 'Logo-2', href: 'https://www.qdeliciasorvetes.com.br/' },
-      { src: '../public/assets/img/Logo3.webp', alt: 'Logo-3', href: 'https://www.instagram.com/eduaneequipamentos/' },
-      { src: '../public/assets/img/Logo4.webp', alt: 'Logo-4', href: 'https://www.zcmateriais.com/' },
-      { src: '../public/assets/img/Logo5.webp', alt: 'Logo-5', href: 'https://www.viamedi.com.br/' },
-      { src: '../public/assets/img/Logo6.webp', alt: 'Logo-6', href: 'https://protecrs.com/' },
-      { src: '../public/assets/img/Logo7.webp', alt: 'Logo-7', href: 'https://azzolinidistribuidora.com.br/' },
-      { src: '../public/assets/img/Logo8.webp', alt: 'Logo-8', href: 'https://www.instagram.com/thebowlerpf/' },
-      { src: '../public/assets/img/Logo9.webp', alt: 'Logo-9', href: 'https://dcmg.com.br/' },
-      { src: '../public/assets/img/Logo10.webp', alt: 'Logo-10', href: 'https://www.grupoconstrumil.com/' },
-      { src: '../public/assets/img/Logo11.webp', alt: 'Logo-11', href: 'https://www.instagram.com/sushidoadao/' },
-      { src: '../public/assets/img/Logo12.webp', alt: 'Logo-12', href: 'https://www.instagram.com/kenji.tapejara/' },
-      { src: '../public/assets/img/Logo13.webp', alt: 'Logo-13', href: 'https://www.instagram.com/hamburguerdodani/' },
+      { src: '../public/assets/img/Logo1.webp', alt: 'Construutil', href: 'https://redeconstruutil.com.br/' },
+      { src: '../public/assets/img/Logo2.webp', alt: 'Qdelicia', href: 'https://www.qdeliciasorvetes.com.br/' },
+      { src: '../public/assets/img/Logo3.webp', alt: 'Eduane', href: 'https://www.instagram.com/eduaneequipamentos/' },
+      { src: '../public/assets/img/Logo4.webp', alt: 'Zc', href: 'https://www.zcmateriais.com/' },
+      { src: '../public/assets/img/Logo5.webp', alt: 'Viamedi', href: 'https://www.viamedi.com.br/' },
+      { src: '../public/assets/img/Logo6.webp', alt: 'Protec', href: 'https://protecrs.com/' },
+      { src: '../public/assets/img/Logo7.webp', alt: 'Azzolini', href: 'https://azzolinidistribuidora.com.br/' },
+      { src: '../public/assets/img/Logo8.webp', alt: 'TheBoweler', href: 'https://www.instagram.com/thebowlerpf/' },
+      { src: '../public/assets/img/Logo9.webp', alt: 'Decarli', href: 'https://dcmg.com.br/' },
+      { src: '../public/assets/img/Logo10.webp', alt: 'Construmil', href: 'https://www.grupoconstrumil.com/' },
+      { src: '../public/assets/img/Logo11.webp', alt: 'Sushiadao', href: 'https://www.instagram.com/sushidoadao/' },
+      { src: '../public/assets/img/Logo12.webp', alt: 'Kenji', href: 'https://www.instagram.com/kenji.tapejara/' },
+      { src: '../public/assets/img/Logo13.webp', alt: 'HamburguerDani', href: 'https://www.instagram.com/hamburguerdodani/' },
     ]
     //Logo client
 if (getLogo) {
@@ -58,10 +58,16 @@ if (getLogo) {
     imgElement.src = image.src;
     imgElement.alt = image.alt;
     imgElement.className = 'logo';
-  
+    
+    const altText = document.createElement('div');
+    altText.className = 'alt-text';
+    altText.textContent = image.alt;
+
     slide.appendChild(slideLink);
     slideLink.appendChild(imgElement);
+    slideLink.appendChild(altText); 
     getLogo.appendChild(slide);
+    
   });
 }
 
@@ -187,9 +193,9 @@ function nextTestimonial() {
 document.getElementById("prev-btn").onclick = prevTestimonial;
 document.getElementById("next-btn").onclick = nextTestimonial;
 
-// setInterval(() => {
-//   nextTestimonial();
-// }, 8000);
+setInterval(() => {
+  nextTestimonial();
+}, 8000);
 
 renderTestimonial(currentIndex);
 
