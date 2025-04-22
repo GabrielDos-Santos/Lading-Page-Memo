@@ -157,8 +157,9 @@ function renderTestimonial(index) {
 
 function updateDots(index) {
   dotsEl.innerHTML = testimonials.map((_, i) =>
-    `<button class="${i === index ? 'active' : ''}" onclick="goToTestimonial(${i})"></button>`
+    `<button class="${i === index ? 'active' : ''} pagination-buttons" onclick="goToTestimonial(${i})"></button>`
   ).join('');
+  
 }
 
 function goToTestimonial(index) {
@@ -179,9 +180,9 @@ function nextTestimonial() {
 document.getElementById("prev-btn").onclick = prevTestimonial;
 document.getElementById("next-btn").onclick = nextTestimonial;
 
-setInterval(() => {
-  nextTestimonial();
-}, 8000);
+// setInterval(() => {
+//   nextTestimonial();
+// }, 8000);
 
 renderTestimonial(currentIndex);
 
