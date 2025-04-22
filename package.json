@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "env": "^0.0.2",
+    "express": "^5.1.0",
+    "ll": "^1.2.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.14.0",
+    "node": "^23.11.0",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.10.1"
+  }
+}

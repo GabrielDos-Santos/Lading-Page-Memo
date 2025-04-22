@@ -582,6 +582,12 @@ input[type="submit"]{
 .false{
     display: none;
 }
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    gap: 10px;
+  }
 
 .pagination-buttons{
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;

@@ -207,3 +207,10 @@ document.addEventListener('DOMContentLoaded', () => {
       menu.classList.toggle('active'); // Alterna a classe 'active'
   });
 });
+document.querySelector("form").addEventListener("submit", function (e) {
+  const response = grecaptcha.getResponse();
+  if (!response) {
+    e.preventDefault();
+    alert("Por favor, confirme que você não é um robô.");
+  }
+});

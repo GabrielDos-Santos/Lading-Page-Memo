@@ -93,7 +93,7 @@
                             <div class="card h-100 shadow-sm">
                                 <div class="card-body">
                                 <i class="bi bi-cart3 fs-2 text-success mb-5"></i>
-                                <h5 class="card-title">Vendas & CRM</h5>
+                                <h5 class="card-title">Vendas</h5>
                                 <p class="card-text">Gerencie clientes, oportunidades e todo o processo de vendas em uma interface unificada.</p>
                                 </div>
                             </div>
@@ -225,8 +225,14 @@
                         <input type="text" id="name" placeholder="Nome" autocomplete="off" required>
                         <input type="email" id="E-mail" placeholder="E-mail" autocomplete="off" required>
                         <input type="number" id="phoneNumber" placeholder="Telefone" autocomplete="off" required>
+                        <textarea style="resize: none;" id="message" placeholder="Mensagem" rows="4" cols="40" required></textarea>
                         <input type="submit" value="Solicitar demonstração" >
                         <p class="demonstration__paragraph">Responderemos em até 24 horas úteis.</p>
+                        <form action="submit.php" method="POST">
+                            <!-- Widget do reCAPTCHA -->
+                            <div class="g-recaptcha" data-sitekey="6LcDzCArAAAAAKWlGbffCYR5JzVtQLhEyLUZn0PN"></div>
+                            <button type="submit">Enviar</button>
+                        </form>
                     </div>
                 </div>  
             </section>
@@ -249,17 +255,15 @@
                 </div>
                 <div class="footer-column" aria-label="Suporte">
                     <h5 class="footer-title">Suporte</h5>
-                    <a href="#" class="footer-link">Central de ajuda</a>
-                    <a href="#" class="footer-link">Documentação</a>
+                    <a href="https://wa.me/54930454599" class="footer-link">Central de ajuda</a>
                     <a href="#" class="footer-link">Status do sistema</a>
-                    <a href="#" class="footer-link">Tutoriais</a>
-                    <a href="#" class="footer-link">FAQ</a>
+                    <a href="https://www.youtube.com/channel/UCbuvc6oBt1ofVBmv_qDzswg" class="footer-link">Tutoriais</a>
                 </div>
                 <div class="footer-column" aria-label="Informações de contato">
                     <h5 class="footer-title">Contato</h5>
                     <p class="footer-text">Av. Presidente Vargas, 910</p>
                     <p class="footer-text">Passo Fundo, RS</p>
-                    <a href="https://wa.me/54930454599" class="footer-link">(54) 9 3045-4599</a>
+                    <a href="https://wa.me/5430454599" class="footer-link">(54)  3045-4599</a>
                     <a href="mailto:suporte@memoriainformatica.com.br" class="footer-link">suporte@memoriainformatica.com.br</a>
                 </div>
             </section>
@@ -272,5 +276,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="./assets/js/mail.js"></script> -->
     <script src="./assets/js/script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </html>
