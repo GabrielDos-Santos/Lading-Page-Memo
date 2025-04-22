@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const galleryContainer = document.querySelector('.swiper-wrapper');
     const getLogo = document.getElementById('client-logos');
+    //Galeria de imagens 
     const galleryImages = [
         { src: '../public/assets/img/Imagem1.jpg', alt: 'Imagem-1-Backup' },
         { src: '../public/assets/img/Imagem2.jpg', alt: 'Imagem-2-Bares' },
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: '../public/assets/img/Imagem22.jpg', alt: 'Imagem-22-Ass_Ténica' },
         { src: '../public/assets/img/Imagem23.jpg', alt: 'Imagem-23-Comercio-Geral' },
     ];
+    //Logo clientes
     const galleryLogos = [
       { src: '../public/assets/img/Logo1.webp', alt: 'Logo-1' },
       { src: '../public/assets/img/Logo2.webp', alt: 'Logo-2' },
