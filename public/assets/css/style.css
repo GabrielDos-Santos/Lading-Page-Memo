@@ -38,9 +38,15 @@ html{
     top: 0;
     z-index: 999;
 }
-.menu-toggle{
-    display: none;
+.menu-toggle {
+    z-index: 1000; /* Superior ao .hero__nav */
+    position: fixed; /* Mantém fixo mesmo com scroll */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
+
 .nav-link{
 text-decoration: none;
 color: var(--cor-dark);
@@ -527,6 +533,17 @@ input[type="submit"]{
     transform: scale(1.1);
     filter: grayscale(0%) opacity(1);
   }
+.active{
+    background: var(--cor-secundaria);
+    color: var(--cor-dark);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+.false{
+    display: none;
+}
+
 
 
 @media (max-width: 1444px) {
@@ -534,6 +551,7 @@ input[type="submit"]{
         padding: 5px 10px;
         overflow: hidden; 
     }
+    
 
     .nav {
         display: flex;
@@ -551,17 +569,23 @@ input[type="submit"]{
         width: 3.5rem;     
         margin-right: 1rem;  
     }
+    
 }
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
     .logo-emp {
         margin-right: 2rem;
     }
+   
+    
+    
 }
 
 @media (max-width: 992px) {
     .hero__header-title {
         font-size: 3rem;
     }
+    
+    
 
     .imagem {
         max-width: 100%;
@@ -631,17 +655,37 @@ input[type="submit"]{
         overflow: visible; /* Permite que o botão escape dos limites */
     }
     /* Estilo do botão de menu */
-    .menu-toggle {
-        z-index: 1000; /* Superior ao .hero__nav */
-        position: fixed; /* Mantém fixo mesmo com scroll */
-        display: block !important;
-        left: 15px;
-        top: 15px;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
+    /* Oculta o menu suspenso inicialmente */
+.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 33px;
+    background-color: var(--cor-light);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    padding: 10px;
+}
+
+/* Exibe o menu quando a classe 'active' é adicionada */
+.menu.active {
+    display: flex;
+}
+
+.menu .dropdown-item {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--cor-dark);
+    font-size: 1rem;
+}
+
+.menu .dropdown-item:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-light);
+    border-radius: 4px;
+}
 
     /* Ajuste da logo */
     .logo-emp {
