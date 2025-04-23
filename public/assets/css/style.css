@@ -587,15 +587,40 @@ input[type="submit"]{
     padding: 8px;
   }
 form {
+
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 450px;
     gap: 10px;
-  }
+}
 
 .pagination-buttons{
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
+.recaptcha-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center; /* ou flex-end, flex-start */
+}
+
+input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+textarea{
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 27rem;
+    resize: none; /* Impede o redimensionamento */
+}
+textarea:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
 @media (max-width: 1920px){
     .menu-toggle {
         display: none;
@@ -753,6 +778,7 @@ form {
     }
 }
 
+
 @media (max-width: 576px) {
     .hero__header-title {
         font-size: 2rem;
@@ -775,6 +801,10 @@ form {
 @media (max-width: 480px) {
     .hero__header-title {
         font-size: 1.5rem;
+    }
+    .recaptcha-container {
+        transform: scale(0.85);
+        transform-origin: 0 0;
     }
 
     .hero__nav {

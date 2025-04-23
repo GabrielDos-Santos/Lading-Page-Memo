@@ -37,7 +37,7 @@ const submit = async (req, res) => {
 
   const mailOptions = {
     from: `Memória Informática LTDA" <${process.env.EMAIL_USER}>`,
-    to: "dossantosgabriel@yahoo.com.br",
+    to: "suporte@memoriainformatica.com.br",
     subject: "Nova solicitação de demonstração ERP",
    html: `
   <div style="font-family: Arial, sans-serif; color: #333;">
