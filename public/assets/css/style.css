@@ -18,19 +18,29 @@ html{
     color: var(--cor-principal);
     text-decoration: underline;
 }
+.nav {
+    display: flex;
+    gap: 1rem; /* Espaçamento entre os links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap; /* Impede quebra de linha */
+}
 
 .hero__header{
     text-align: center;
 }
 .logo-emp{
     width: 5rem;
-    margin-right: 75rem;
 }
 .hero__nav {
+    display: flex;
+    justify-content: space-between; /* Espaço entre logo e navegação */
+    align-items: center; /* Alinha verticalmente */
     background: rgba(255, 255, 255, 0.2); /* Transparência */
     backdrop-filter: blur(10px); /* Efeito de desfoque */
-    -webkit-backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.3); 
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
     padding: 5px 15px;
     position: fixed;
@@ -706,6 +716,7 @@ textarea:focus{
 @media (max-width: 992px){
     .hero__nav {
         padding: 5px 10px;
+        justify-content: flex-start;
     }
 
     /* Transforma a lista em coluna */
@@ -727,40 +738,42 @@ textarea:focus{
     }
     .hero__nav {
         padding: 5px 10px; /* Reduz o padding */
+        justify-content: flex-start;
     }
 
     .hero__nav {
         overflow: visible; /* Permite que o botão escape dos limites */
     }
-    /* Estilo do botão de menu */
     /* Oculta o menu suspenso inicialmente */
 .menu {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 33px;
+    left: 45px;
     background-color: var(--cor-light);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     z-index: 1000;
-    padding: 10px;
+    padding: 20px;
+    width: 20rem;
+    height: auto;
 }
 
 .menu-toggle{
     display: flex;
 }
 
-/* Exibe o menu quando a classe 'active' é adicionada */
+
 .menu.active {
     display: flex;
 }
 
 .menu .dropdown-item {
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
     color: var(--cor-dark);
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .menu .dropdown-item:hover {
@@ -772,6 +785,32 @@ textarea:focus{
     /* Ajuste da logo */
     .logo-emp {
         display: none;
+    }
+}
+@media (max-width: 768px) {
+    .hero__header-title {
+        font-size: 2.5rem;
+    }
+
+    .hero__nav {
+        padding: 5px 10px;
+        justify-content: flex-start;
+    }
+
+    /* Transforma a lista em coluna */
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .nav.active .nav-item {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
     }
 }
 
@@ -799,24 +838,26 @@ textarea:focus{
     }
     .hero__nav {
         padding: 5px 10px; /* Reduz o padding */
+        justify-content: flex-start;
     }
 
     .hero__nav {
         overflow: visible; /* Permite que o botão escape dos limites */
     }
-    /* Estilo do botão de menu */
-    /* Oculta o menu suspenso inicialmente */
+/*MENU - REFERENTE AO MENU TOGGLE*/
 .menu {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 33px;
+    left: 45px;
     background-color: var(--cor-light);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     z-index: 1000;
-    padding: 10px;
+    padding: 20px;
+    width: 20rem;
+    height: auto;
 }
 
 .menu-toggle{
@@ -829,10 +870,10 @@ textarea:focus{
 }
 
 .menu .dropdown-item {
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
     color: var(--cor-dark);
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .menu .dropdown-item:hover {
@@ -855,6 +896,7 @@ textarea:focus{
 
     .hero__nav {
         padding: 10px;
+        justify-content: flex-start;
     }
 
     .imagem {
@@ -883,6 +925,7 @@ textarea:focus{
 
     .hero__nav {
         padding: 5px;
+        justify-content: flex-start;
     }
 
     .hero__header-title {
@@ -1021,6 +1064,7 @@ textarea:focus{
 
     .hero__nav {
         padding: 5px;
+        justify-content: flex-start;
     }
 
     .hero__header-title {
@@ -1066,6 +1110,7 @@ textarea:focus{
 
     .hero__nav {
         padding: 5px;
+        justify-content: flex-start;
     }
 
     .hero__header-title {

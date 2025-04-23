@@ -17,25 +17,34 @@
 <body>
     <header>
         <nav class="hero__nav" aria-label="Menu principal">
+            <a href="../index.html" aria-label="Página inicial">
+                <img class="logo-emp" src="../assets/img/logo.png" alt="Logo">
+            </a>
             <ul class="nav" aria-label="Lista de navegação">
-                <a href="../index.html" aria-label="Página inicial">
-                    <img class="logo-emp" src="../assets/img/logo.png" alt="Logo">
-                </a>
                 <button class="menu-toggle" aria-label="Abrir menu">☰</button>
                     <ul class="menu dropdown-menu" aria-label="Menu suspenso">
-                        <li><a class="dropdown-item" href="#features" aria-label="Funcionalidades">Funcionalidades</a></li>
-                        <li><a class="dropdown-item" href="#benefits" aria-label="Benefícios">Benefícios</a></li>
+                        <li><a class="dropdown-item" href="../index.html" aria-label="Inicio">Inicio</a></li>
+                        <li><a class="dropdown-item" href="#about" aria-label="História">História</a></li>
+                        <li><a class="dropdown-item" href="#mission" aria-label="Valores">Valores</a></li>
+                        <li><a class="dropdown-item" href="#team" aria-label="Equipe">Equipe</a></li>
                         <li><a class="dropdown-item" href="#contact" aria-label="Contato">Contato</a></li>
+                        <li><a class="dropdown-item" href="./pages/aboutUs.html" aria-label="Sobre Nós">Sobre nós</a></li>
                         <li><a class="dropdown-item" href="https://novidades.memoriainformatica.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Novidades">Novidades</a></li>
                     </ul>
                 <li class="nav-item">
-                    <a class="nav-link hover" href="#features" aria-label="Funcionalidades">Funcionalidades</a>
+                    <a class="nav-link hover" href="#about" aria-label="História">História</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hover" href="#benefits" aria-label="Benefícios">Benefícios</a>
+                    <a class="nav-link hover" href="#mission" aria-label="Valores">Valores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hover" href="#team" aria-label="Equipe">Equipe</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link hover" href="#contact" aria-label="Contato">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hover" href="./pages/aboutUs.html" aria-label="Sobre Nós">Sobre Nós</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link hover" href="https://novidades.memoriainformatica.com.br/" target="_blank" aria-label="Novidades">Novidades</a>
@@ -65,7 +74,7 @@
                     <img src="../assets/img/Equipe.jpg" alt="Equipe Memoria">
                 </div>
             </div>
-            <div class="mission-vision">
+            <div id="mission" class="mission-vision">
                 <div class="mission">
                     <h3>Nossa Missão</h3>
                     <p>Fornecer soluções de gestão empresarial que simplifiquem processos, aumentem a produtividade e impulsionem o crescimento sustentável dos nossos clientes, através de tecnologia inovadora e suporte excepcional.</p>

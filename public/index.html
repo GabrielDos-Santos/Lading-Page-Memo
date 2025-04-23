@@ -17,15 +17,17 @@
     <body>
         <header>
             <nav class="hero__nav" aria-label="Menu principal">
+                <a href="index.html" aria-label="Página inicial">
+                    <img class="logo-emp" src="./assets/img/logo.png" alt="Logo">
+                </a>
                 <ul class="nav" aria-label="Lista de navegação">
-                    <a href="index.html" aria-label="Página inicial">
-                        <img class="logo-emp" src="./assets/img/logo.png" alt="Logo">
-                    </a>
                     <button class="menu-toggle" aria-label="Abrir menu">☰</button>
                         <ul class="menu dropdown-menu" aria-label="Menu suspenso">
+                            <li><a class="dropdown-item" href="index.html" aria-label="Inicio">Inicio</a></li>
                             <li><a class="dropdown-item" href="#features" aria-label="Funcionalidades">Funcionalidades</a></li>
-                            <li><a class="dropdown-item" href="#benefits" aria-label="Benefícios">Benefícios</a></li>
+                            <li><a class="dropdown-item" href="#benefits" aria-label="Beneficios">Beneficios</a></li>
                             <li><a class="dropdown-item" href="#contact" aria-label="Contato">Contato</a></li>
+                            <li><a class="dropdown-item" href="./pages/aboutUs.html" aria-label="Sobre Nós">Sobre nós</a></li>
                             <li><a class="dropdown-item" href="https://novidades.memoriainformatica.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Novidades">Novidades</a></li>
                         </ul>
                     <li class="nav-item">
@@ -36,6 +38,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link hover" href="#contact" aria-label="Contato">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover" href="./pages/aboutUs.html" aria-label="Sobre Nós">Sobre Nós</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link hover" href="https://novidades.memoriainformatica.com.br/" target="_blank" aria-label="Novidades">Novidades</a>
@@ -49,7 +54,9 @@
                     <h1 class="hero__header-title">Gerencie seu negócio com <p class="green">eficiência.</p></h1>
                     <span class="hero__header-text">Uma solução completa de ERP que simplifica processos, aumenta a <p> produtividade e melhora os resultados da sua empresa.</p></span>
                     <a href="#demonstration" type="button" class="btn btn-success" aria-label="Agendar demonstração">Agendar demonstração</a>
-                    <button type="button" class="btn btn-light" aria-label="Saiba mais">Saiba Mais</button>
+                    <a href="#benefits">
+                        <button type="submit" class="btn btn-light" aria-label="Saiba mais">Saiba Mais</button>
+                    </a>  
                     <br>
                 </div>
             <section>   

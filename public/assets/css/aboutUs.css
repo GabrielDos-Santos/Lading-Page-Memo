@@ -13,6 +13,19 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif
 }
+html{
+    scroll-behavior: smooth;
+    
+}
+.nav {
+    display: flex;
+    gap: 1rem; /* Espaçamento entre os links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap; /* Impede quebra de linha */
+}
+
 .nav-buttons {
     position: absolute;
     top: 50%;
@@ -38,10 +51,13 @@
     text-decoration: underline;
 }
 .hero__nav {
+    display: flex;
+    justify-content: space-between; /* Espaço entre logo e navegação */
+    align-items: center; /* Alinha verticalmente */
     background: rgba(255, 255, 255, 0.2); /* Transparência */
     backdrop-filter: blur(10px); /* Efeito de desfoque */
-    -webkit-backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.3); 
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
     padding: 5px 15px;
     position: fixed;
@@ -66,7 +82,7 @@ padding: 1.1rem;
 }
 .logo-emp{
     width: 5rem;
-    margin-right: 75rem;
+    /* margin-right: 75rem; */
 }
 
 
@@ -375,6 +391,7 @@ footer {
 @media (max-width: 992px){
     .hero__nav {
         padding: 5px 10px;
+        justify-content: flex-start;
     }
 
     /* Transforma a lista em coluna */
@@ -396,6 +413,7 @@ footer {
     }
     .hero__nav {
         padding: 5px 10px; /* Reduz o padding */
+        justify-content: flex-start;
     }
 
     .hero__nav {
@@ -407,13 +425,16 @@ footer {
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 33px;
-    background-color: var(--cor-light);
+    left: 45px;
+    background-color: var(--white);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     z-index: 1000;
-    padding: 10px;
+    padding: 20px;
+    width: 20rem;
+    height: auto;
 }
+
 
 .menu-toggle{
     display: flex;
@@ -425,15 +446,15 @@ footer {
 }
 
 .menu .dropdown-item {
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
-    color: var(--cor-dark);
-    font-size: 1rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
 }
 
 .menu .dropdown-item:hover {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-light);
+    background-color: var(--secondary-color);
+    color: var(--white);
     border-radius: 4px;
 }
 
@@ -441,11 +462,17 @@ footer {
     .logo-emp {
         display: none;
     }
+    .menu .dropdown-item:hover {
+        background-color: var(--secondary-color);
+        color: var(--white);
+        border-radius: 4px;
+    }
 }
 
 @media (max-width: 769px) {
     .hero__nav {
         padding: 5px 10px;
+        justify-content: flex-start;
     }
 
     /* Transforma a lista em coluna */
@@ -467,27 +494,23 @@ footer {
     }
     .hero__nav {
         padding: 5px 10px; /* Reduz o padding */
+        justify-content: flex-start;
     }
 
     .hero__nav {
         overflow: visible; /* Permite que o botão escape dos limites */
     }
     /* Oculta o menu suspenso inicialmente */
-.menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 33px;
-    background-color: var(--white);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    z-index: 1000;
-    padding: 10px;
-}
+    menu .dropdown-item {
+        padding: 15px;
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 1.5rem;
+    }
 
 .menu-toggle{
     display: flex;
+    justify-content: space-between;
 }
 
 /* Exibe o menu quando a classe 'active' é adicionada */
@@ -496,10 +519,10 @@ footer {
 }
 
 .menu .dropdown-item {
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .menu .dropdown-item:hover {
@@ -530,6 +553,12 @@ footer {
     .section-title h2 {
         font-size: 1.8rem;
     }
+    menu .dropdown-item {
+        padding: 15px;
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 1.5rem;
+    }
     
 }
 @media (max-width: 576px) {
@@ -539,6 +568,7 @@ footer {
 
     .hero__nav {
         padding: 10px;
+        justify-content: flex-start;
     }
 }
 
@@ -553,6 +583,7 @@ footer {
 
     .hero__nav {
         padding: 5px;
+        justify-content: flex-start;
     }
 
     .hero__header-title {
@@ -569,6 +600,7 @@ footer {
 
     .hero__nav {
         padding: 5px;
+        justify-content: flex-start;
     }
 
     .hero__header-title {
@@ -582,6 +614,7 @@ footer {
 
     .hero__nav {
         padding: 5px;
+        justify-content: flex-start;
     }
 
     .hero__header-title {
