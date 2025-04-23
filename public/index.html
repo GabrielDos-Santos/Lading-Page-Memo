@@ -222,17 +222,16 @@
                 </div>
                 <div class="inputs-wrapper">
                     <div class="inputs">
-                        <input type="text" id="name" placeholder="Nome" autocomplete="off" required>
-                        <input type="email" id="E-mail" placeholder="E-mail" autocomplete="off" required>
-                        <input type="number" id="phoneNumber" placeholder="Telefone" autocomplete="off" required>
-                        <textarea style="resize: none;" id="message" placeholder="Mensagem" rows="4" cols="40" required></textarea>
-                        <input type="submit" value="Solicitar demonstração" >
-                        <p class="demonstration__paragraph">Responderemos em até 24 horas úteis.</p>
-                        <form action="submit.php" method="POST">
-                            <!-- Widget do reCAPTCHA -->
-                            <div class="g-recaptcha" data-sitekey="6LcDzCArAAAAAKWlGbffCYR5JzVtQLhEyLUZn0PN"></div>
-                            <button type="submit">Enviar</button>
+                        <form id="form-contato">
+                            <input name="nome" type="text" id="name" placeholder="Nome" autocomplete="off" required>
+                            <input name="email" type="email" id="E-mail" placeholder="E-mail" autocomplete="off" required>
+                            <input name="telefone" type="number" id="phoneNumber" placeholder="Telefone" autocomplete="off" required>
+                            <textarea name="mensagem" style="resize: none;" id="message" placeholder="Mensagem" rows="4"  required></textarea>
+                            <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                            <input type="submit" value="Solicitar demonstração" >
                         </form>
+                        <p class="demonstration__paragraph">Responderemos em até 24 horas úteis.</p>
+                        <div id="mensagem-retorno" style="margin-top: 10px; font-weight: bold;"></div>
                     </div>
                 </div>  
             </section>

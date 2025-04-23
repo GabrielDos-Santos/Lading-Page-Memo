@@ -211,6 +211,68 @@ document.querySelector("form").addEventListener("submit", function (e) {
   const response = grecaptcha.getResponse();
   if (!response) {
     e.preventDefault();
-    alert("Por favor, confirme que você não é um robô.");
+    
+  }
+});
+
+document.querySelector("form").addEventListener("submit", function (e) {
+  const nome = document.querySelector('[name="nome"]').value.trim();
+  const email = document.querySelector('[name="email"]').value.trim();
+  const telefone = document.querySelector('[name="telefone"]').value.trim();
+  const mensagem = document.querySelector('[name="mensagem"]').value.trim();
+  const recaptcha = grecaptcha.getResponse();
+
+  if (!nome || !email || !telefone || !mensagem) {
+    e.preventDefault();
+    alert("Por favor, preencha todos os campos.");
+    return;
+  }
+
+  if (!recaptcha) {
+    e.preventDefault();
+    
+  }
+});
+
+const form = document.getElementById("form-contato");
+const mensagem = document.getElementById("mensagem-retorno");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const recaptcha = grecaptcha.getResponse();
+
+  if (!recaptcha) {
+    mensagem.textContent = "⚠️ Confirme que você não é um robô.";
+    mensagem.style.color = "red";
+    return;
+  }
+
+  const dados = new URLSearchParams(new FormData(form));
+  dados.append("g-recaptcha-response", recaptcha);
+
+  try {
+    const resposta = await fetch("/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: dados,
+    });
+
+    const texto = await resposta.text();
+
+    if (resposta.ok) {
+      mensagem.textContent = "✅ Formulário enviado com sucesso!";
+      mensagem.style.color = "green";
+      form.reset();
+      grecaptcha.reset();
+    } else {
+      mensagem.textContent = texto || "❌ Erro ao enviar.";
+      mensagem.style.color = "red";
+    }
+  } catch (error) {
+    mensagem.textContent = "❌ Erro de conexão.";
+    mensagem.style.color = "red";
   }
 });
