@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="./assets/css/style.css">
-        <link rel="shortcut icon" href="/icon/icone.png" />
+        <link rel="shortcut icon" href="./icon/icone.png" />
         <title>Inicial | Site da Memória</title>
     </head>
     <body>
@@ -19,7 +19,7 @@
             <nav class="hero__nav" aria-label="Menu principal">
                 <ul class="nav" aria-label="Lista de navegação">
                     <a href="index.html" aria-label="Página inicial">
-                        <img class="logo-emp" src="/assets/img/logo.png" alt="Logo">
+                        <img class="logo-emp" src="./assets/img/logo.png" alt="Logo">
                     </a>
                     <button class="menu-toggle" aria-label="Abrir menu">☰</button>
                         <ul class="menu dropdown-menu" aria-label="Menu suspenso">
@@ -192,29 +192,29 @@
             </section>
             <section id="testimonials" class="testimonials-section" aria-label="Depoimentos">
                 <div class="container">
-                  <div class="header" aria-label="Cabeçalho de depoimentos">
+                <div class="header" aria-label="Cabeçalho de depoimentos">
                     <h2>O que nossos <span class="high text-success">clientes dizem</span></h2>
                     <p>Veja como empresas de diversos setores transformaram seus negócios com nosso sistema ERP.</p>
-                  </div>
-                  <!--Testemunhas gerados dinamicamente pelo JS-->>
-                  <div class="testimonial-container" aria-label="Carrossel de depoimentos">
-                    <div class="testimonial-card" id="testimonial-content"></div>
-                    <div class="nav-buttons">
-                        <button id="prev-btn" class="nav-button prev bi bi-chevron-left" aria-label="Depoimento anterior"></button>
-                        <button id="next-btn" class="nav-button next bi bi-chevron-right" aria-label="Próximo depoimento"></button>
+                </div>
+                <!--Testemunhas gerados dinamicamente pelo JS-->>
+                    <div class="testimonial-container" aria-label="Carrossel de depoimentos">
+                        <div class="testimonial-card" id="testimonial-content"></div>
+                            <div class="nav-buttons">
+                                <button id="prev-btn" class="nav-button prev bi bi-chevron-left" aria-label="Depoimento anterior"></button>
+                                <button id="next-btn" class="nav-button next bi bi-chevron-right" aria-label="Próximo depoimento"></button>
+                            </div>
                     </div>
-                  </div>
-                  <div class="pagination" id="pagination-dots" aria-label="Paginação"></div>
-                  <div class="clients-logos" aria-label="Logos de clientes">
-                    <p>Empresas que confiam em nosso sistema</p>
+                    <div class="pagination" id="pagination-dots" aria-label="Paginação"></div>
+                    <div class="clients-logos" aria-label="Logos de clientes">
+                        <p>Empresas que confiam em nosso sistema</p>
                         <div class="swiper client-logo-slider">
                             <div class="swiper-wrapper" id="client-logos">
                             <!-- Logos adicionadas via JS -->
                             </div>
                         </div>
-                  </div>
+                    </div>
                 </div>
-              </section>              
+            </section>              
             <section id="demonstration" class="demonstration" aria-label="Demonstração">
                 <div class="hero__demonstration">
                     <h4 class="hero__demonstration-title">Pronto para otimizar sua operação?</h4>
@@ -250,7 +250,7 @@
                 </div>
                 <div class="footer-column" aria-label="Informações da empresa">
                     <h5 class="footer-title">Empresa</h5>
-                    <a href="#" class="footer-link">Sobre nós</a>
+                    <a href="./pages/aboutUs.html" class="footer-link">Sobre nós</a>
                     <a href="#testimonials" class="footer-link">Nossos clientes</a>
                     <a href="#" class="footer-link">Carreiras</a>
                 </div>
@@ -279,5 +279,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- <script src="./assets/js/mail.js"></script> -->
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/menu.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </html>

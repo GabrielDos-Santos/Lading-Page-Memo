@@ -3,45 +3,45 @@ document.addEventListener('DOMContentLoaded', () => {
     const getLogo = document.getElementById('client-logos');
     //Galeria de imagens 
     const galleryImages = [
-        { src: '/assets/img/Imagem1.jpg', alt: 'Imagem-1-Backup' },
-        { src: '/assets/img/Imagem2.jpg', alt: 'Imagem-2-Bares' },
-        { src: '/assets/img/Imagem3.jpg', alt: 'Imagem-3-CashBack' },
-        { src: '/assets/img/Imagem4.jpg', alt: 'Imagem-4-e-Commerce' },
-        { src: '/assets/img/Imagem5.jpg', alt: 'Imagem-5-Marketplace' },
-        { src: '/assets/img/Imagem6.jpg', alt: 'Imagem-6-Extintor' },
-        { src: '/assets/img/Imagem7.jpg', alt: 'Imagem-7-Marketplace' },
-        { src: '/assets/img/Imagem8.jpg', alt: 'Imagem-8-Mat_Construção' },
-        { src: '/assets/img/Imagem9.jpg', alt: 'Imagem-9-Oficina' },
-        { src: '/assets/img/Imagem10.jpg', alt: 'Imagem-10-Pix' },
-        { src: '/assets/img/Imagem11.jpg', alt: 'Imagem-11-Prof_Saude' },
-        { src: '/assets/img/Imagem12.jpg', alt: 'Imagem-12-SPic2' },
-        { src: '/assets/img/Imagem13.jpg', alt: 'Imagem-13-Tablet_Mesa' },
-        { src: '/assets/img/Imagem14.jpg', alt: 'Imagem-14-Rotas_Mob' },
-        { src: '/assets/img/Imagem15.jpg', alt: 'Imagem-15-Sacoleiras' },
-        { src: '/assets/img/Imagem16.jpg', alt: 'Imagem-16-Transportadora' },
-        { src: '/assets/img/Imagem17.jpg', alt: 'Imagem-17-Youtube' },
-        { src: '/assets/img/Imagem18.jpg', alt: 'Imagem-18-Tef' },
-        { src: '/assets/img/Imagem19.jpg', alt: 'Imagem-19-Distribuição' },
-        { src: '/assets/img/Imagem20.jpg', alt: 'Imagem-20-Checklist' },
-        { src: '/assets/img/Imagem21.jpg', alt: 'Imagem-21-Auto-Pesagem' },
-        { src: '/assets/img/Imagem22.jpg', alt: 'Imagem-22-Ass_Ténica' },
-        { src: '/assets/img/Imagem23.jpg', alt: 'Imagem-23-Comercio-Geral' },
+        { src: './assets/img/Imagem1.jpg', alt: 'Imagem-1-Backup' },
+        { src: './assets/img/Imagem2.jpg', alt: 'Imagem-2-Bares' },
+        { src: './assets/img/Imagem3.jpg', alt: 'Imagem-3-CashBack' },
+        { src: './assets/img/Imagem4.jpg', alt: 'Imagem-4-e-Commerce' },
+        { src: './assets/img/Imagem5.jpg', alt: 'Imagem-5-Marketplace' },
+        { src: './assets/img/Imagem6.jpg', alt: 'Imagem-6-Extintor' },
+        { src: './assets/img/Imagem7.jpg', alt: 'Imagem-7-Marketplace' },
+        { src: './assets/img/Imagem8.jpg', alt: 'Imagem-8-Mat_Construção' },
+        { src: './assets/img/Imagem9.jpg', alt: 'Imagem-9-Oficina' },
+        { src: './assets/img/Imagem10.jpg', alt: 'Imagem-10-Pix' },
+        { src: './assets/img/Imagem11.jpg', alt: 'Imagem-11-Prof_Saude' },
+        { src: './assets/img/Imagem12.jpg', alt: 'Imagem-12-SPic2' },
+        { src: './assets/img/Imagem13.jpg', alt: 'Imagem-13-Tablet_Mesa' },
+        { src: './assets/img/Imagem14.jpg', alt: 'Imagem-14-Rotas_Mob' },
+        { src: './assets/img/Imagem15.jpg', alt: 'Imagem-15-Sacoleiras' },
+        { src: './assets/img/Imagem16.jpg', alt: 'Imagem-16-Transportadora' },
+        { src: './assets/img/Imagem17.jpg', alt: 'Imagem-17-Youtube' },
+        { src: './assets/img/Imagem18.jpg', alt: 'Imagem-18-Tef' },
+        { src: './assets/img/Imagem19.jpg', alt: 'Imagem-19-Distribuição' },
+        { src: './assets/img/Imagem20.jpg', alt: 'Imagem-20-Checklist' },
+        { src: './assets/img/Imagem21.jpg', alt: 'Imagem-21-Auto-Pesagem' },
+        { src: './assets/img/Imagem22.jpg', alt: 'Imagem-22-Ass_Ténica' },
+        { src: './assets/img/Imagem23.jpg', alt: 'Imagem-23-Comercio-Geral' },
     ];
     //Logo clientes
     const galleryLogos = [
-      { src: '/assets/img/Logo1.webp', alt: 'Construutil', href: 'https://redeconstruutil.com.br/' },
-      { src: '/assets/img/Logo2.webp', alt: 'Qdelicia', href: 'https://www.qdeliciasorvetes.com.br/' },
-      { src: '/assets/img/Logo3.webp', alt: 'Eduane', href: 'https://www.instagram.com/eduaneequipamentos/' },
-      { src: '/assets/img/Logo4.webp', alt: 'Zc', href: 'https://www.zcmateriais.com/' },
-      { src: '/assets/img/Logo5.webp', alt: 'Viamedi', href: 'https://www.viamedi.com.br/' },
-      { src: '/assets/img/Logo6.webp', alt: 'Protec', href: 'https://protecrs.com/' },
-      { src: '/assets/img/Logo7.webp', alt: 'Azzolini', href: 'https://azzolinidistribuidora.com.br/' },
-      { src: '/assets/img/Logo8.webp', alt: 'TheBoweler', href: 'https://www.instagram.com/thebowlerpf/' },
-      { src: '/assets/img/Logo9.webp', alt: 'Decarli', href: 'https://dcmg.com.br/' },
-      { src: '/assets/img/Logo10.webp', alt: 'Construmil', href: 'https://www.grupoconstrumil.com/' },
-      { src: '/assets/img/Logo11.webp', alt: 'Sushiadao', href: 'https://www.instagram.com/sushidoadao/' },
-      { src: '/assets/img/Logo12.webp', alt: 'Kenji', href: 'https://www.instagram.com/kenji.tapejara/' },
-      { src: '/assets/img/Logo13.webp', alt: 'HamburguerDani', href: 'https://www.instagram.com/hamburguerdodani/' },
+      { src: './assets/img/Logo1.webp', alt: 'Construutil', href: 'https://redeconstruutil.com.br/' },
+      { src: './assets/img/Logo2.webp', alt: 'Qdelicia', href: 'https://www.qdeliciasorvetes.com.br/' },
+      { src: './assets/img/Logo3.webp', alt: 'Eduane', href: 'https://www.instagram.com/eduaneequipamentos/' },
+      { src: './assets/img/Logo4.webp', alt: 'Zc', href: 'https://www.zcmateriais.com/' },
+      { src: './assets/img/Logo5.webp', alt: 'Viamedi', href: 'https://www.viamedi.com.br/' },
+      { src: './assets/img/Logo6.webp', alt: 'Protec', href: 'https://protecrs.com/' },
+      { src: './assets/img/Logo7.webp', alt: 'Azzolini', href: 'https://azzolinidistribuidora.com.br/' },
+      { src: './assets/img/Logo8.webp', alt: 'TheBoweler', href: 'https://www.instagram.com/thebowlerpf/' },
+      { src: './assets/img/Logo9.webp', alt: 'Decarli', href: 'https://dcmg.com.br/' },
+      { src: './assets/img/Logo10.webp', alt: 'Construmil', href: 'https://www.grupoconstrumil.com/' },
+      { src: './assets/img/Logo11.webp', alt: 'Sushiadao', href: 'https://www.instagram.com/sushidoadao/' },
+      { src: './assets/img/Logo12.webp', alt: 'Kenji', href: 'https://www.instagram.com/kenji.tapejara/' },
+      { src: './assets/img/Logo13.webp', alt: 'HamburguerDani', href: 'https://www.instagram.com/hamburguerdodani/' },
     ]
     //Logo client
 if (getLogo) {
@@ -199,14 +199,6 @@ setInterval(() => {
 
 renderTestimonial(currentIndex);
 
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu');
-
-  menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('active'); // Alterna a classe 'active'
-  });
-});
 document.querySelector("form").addEventListener("submit", function (e) {
   const response = grecaptcha.getResponse();
   if (!response) {
