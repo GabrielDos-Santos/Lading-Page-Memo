@@ -31,7 +31,7 @@ html{
     text-align: center;
 }
 .logo-emp{
-    width: 5rem;
+    width: 10rem;
 }
 .hero__nav {
     display: flex;
@@ -70,7 +70,7 @@ padding: 1.1rem;
 }
 
 .hero__header-title{
-    margin-top: 5rem;
+    margin-top: 10rem;
     font-size: 4.5rem;
 }
 
